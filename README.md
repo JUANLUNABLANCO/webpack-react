@@ -11,7 +11,7 @@
 > git config --local user.name "JUANLUNABLANCO"
 > git branch -M  main
 
-En este punto debes crear un repositorio nuevo en github vacío y anlazarlo
+En este punto debes crear un repositorio nuevo en github vacío y enlazarlo
 
 <!-- > git remote add origin https://github.com/JUANLUNABLANCO/<tu-repo>.git -->
 > git remote add origin https://github.com/JUANLUNABLANCO/webpack-react.git
