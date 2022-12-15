@@ -10,8 +10,14 @@
 
     "scripts": {
 
-        "test": "echo \"Error: no test specified\" && exit 1"
-
+        "clean": "rimraf ./dist",
+        "watch": "npm run dev -- --watch",
+        "dev": "npm run clean && npx webpack --config webpack.config.dev.js",
+        "build": "npm run clean && npx webpack --config webpack.config.prod.js",
+        "start:dev": "webpack serve --config webpack.config.dev.js",
+        "build:server": "node ./scripts/create-env.js && npx webpack --config webpack.config.prod.js",
+        "analyzer:json": "npx webpack --profile --json > stats.json",
+        "analyzer:web": "npx webpack-bundle-analyzer stats.json"
     },
 
     "dependencies": {
@@ -54,7 +60,31 @@
 
         "babel-loader": "^9.1.0",
 
+        "css-loader": "^6.7.3",
+
+        "css-minimizer-webpack-plugin": "^4.2.2",
+
+        "dotenv-webpack": "^8.0.1",
+
+        "html-loader": "^4.2.0",
+
+        "html-webpack-plugin": "^5.5.0",
+
+        "mini-css-extract-plugin": "^2.7.2",
+
+        "rimraf": "^3.0.2",
+
+        "sass": "^1.56.2",
+
+        "sass-loader": "^13.2.0",
+
+        "style-loader": "^3.3.1",
+
+        "terser-webpack-plugin": "^5.3.6",
+
         "webpack": "^5.75.0",
+
+        "webpack-bundle-analyzer": "^4.7.0",
 
         "webpack-cli": "^5.0.1",
 
@@ -63,4 +93,3 @@
     }
 
 }
-
