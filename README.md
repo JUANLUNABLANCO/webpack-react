@@ -34,6 +34,7 @@ En este punto debes crear un repositorio nuevo en github vacío y enlazarlo
 crear el archivo App.jsx dentro de components
 
 --- App.jsx ---
+
 import React from 'react';
 
 const App = () => <h1>Hello React!</h1>
