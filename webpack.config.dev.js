@@ -69,9 +69,11 @@ module.exports = {
     ],
     devServer: {
         static: path.join(__dirname, 'dist'),
+		watchFiles: ['src/**/*'],
         compress: true,
         historyApiFallback: true,
         port: 8080,
         open: true
-    }
+    },
+	devtool: "inline-source-map",
 }
